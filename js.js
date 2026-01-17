@@ -96,3 +96,34 @@ function checkForSpam(message) {
 }
 
 console.log(checkForSpam("Super SaLE going on"));
+
+// 6. 
+
+let input;
+const numbers = [];
+let total = 0;
+
+while (true) {
+  input = prompt("Enter a number:");
+
+  if (input === null) {
+    break;
+  }
+
+  const value = Number(input);
+
+  if (Number.isNaN(value)) {
+    alert("Було введено не число, попробуйте ще раз");
+    continue;
+  }
+
+  numbers.push(value);
+}
+
+if (numbers.length > 0) {
+  for (const num of numbers) {
+    total += num;
+  }
+
+  console.log(`Загальна сума чисел дорівнює ${total}`);
+}
